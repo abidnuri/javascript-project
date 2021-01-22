@@ -38,15 +38,18 @@ function hotelCost(time) {
     if (time < 0) {
         return "Error! Time can't be Negative."
     }
+    // Staying 10 days or less than 10 days
     else if (time <= 10) {
         cost = time * 100;
     }
+    // Staying 20 days or less than 20 days
     else if (time <= 20) {
         var firstStay = 10 * 100;
         var remainingTime = time - 10;
         var secondStay = remainingTime * 80;
         cost = firstStay + secondStay;
     }
+    // Staying 21 days or extra
     else {
         var firstStay = 10 * 100;
         var secondStay = 10 * 80;
@@ -64,11 +67,14 @@ function megaFriend(name) {
     var friendName = name[0];
     for (var i = 0; i < name.length; i++) {
         var element = name[i];
-        if (element.length > friendName.length) {
+        if (name[i] == 0) {
+            return "Error! Please input name."
+        }
+        else if (element.length > friendName.length) {
             friendName = element;
         }
     }
     return friendName;
 }
-var result = ['Abid', 'Nuri', 'Saiful', 'Kaiful', 'Jashim Builders', 'Aasim'];
+var result = ['Abid', 'Nuri', 'Saiful', 'Ayrin', 'Jashim Builders', 'Aasim'];
 console.log(megaFriend(result));
