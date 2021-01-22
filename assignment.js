@@ -1,13 +1,13 @@
 // https://github.com/abidnuri/javascript-project
 // First Problem kilometerToMeter
 function kilometerToMeter(kilometer) {
-    var meter = kilometer * 1000;
     if (kilometer < 0) {
         return "Error! Please use positive number."
     }
     else {
-        return meter;
+        var meter = kilometer * 1000;
     }
+    return meter;
 }
 var findMeter = kilometerToMeter(5);
 console.log(findMeter);
@@ -26,8 +26,8 @@ function budgetCalculator(watch, phone, laptop) {
     }
     else {
         var total = (watch * 50) + (phone * 100) + (laptop * 500);
-        return total;
     }
+    return total;
 }
 var result = budgetCalculator(1, 3, 1);
 console.log(result);
@@ -36,7 +36,7 @@ console.log(result);
 function hotelCost(time) {
     var cost = 0;
     if (time < 0) {
-        return "Error! Time can't Negative."
+        return "Error! Time can't be Negative."
     }
     else if (time <= 10) {
         cost = time * 100;
@@ -70,5 +70,5 @@ function megaFriend(name) {
     }
     return friendName;
 }
-var result = ['Abid', 'Nuri', 'Saiful', 'Kaiful', 'Jashim Builders'];
+var result = ['Abid', 'Nuri', 'Saiful', 'Kaiful', 'Jashim Builders', 'Aasim'];
 console.log(megaFriend(result));
