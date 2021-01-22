@@ -25,11 +25,36 @@ function budgetCalculator(watch, phone, laptop) {
         return "Error! Put The Right Value Of Laptop."
     }
     else {
-        var total = watch * 50 + phone * 100 + laptop * 500;
+        var total = (watch * 50) + (phone * 100) + (laptop * 500);
         return total;
     }
 }
-var result = budgetCalculator(1, 2, 1);
+var result = budgetCalculator(1, 3, 1);
 console.log(result);
 
-
+// Third Problem hotelCost
+function hotelCost(time) {
+    var cost = 0;
+    if(time<0){
+        return "Error! Time can't Negative."
+    }
+    else if (time <= 10) {
+        cost = time * 100;
+    }
+    else if (time <= 20) {
+        var firstStay = 10 * 100;
+        var remainingTime = time - 10;
+        var secondStay = remainingTime * 80;
+        cost = firstStay + secondStay;
+    }
+    else {
+        var firstStay = 10 * 100;
+        var secondStay = 10 * 80;
+        var remainingTime = time - 20;
+        var thirdStay = remainingTime * 50;
+        cost = firstStay + secondStay + thirdStay;
+    }
+    return cost;
+}
+var result = hotelCost(30);
+console.log(result);
