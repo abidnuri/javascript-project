@@ -1,16 +1,16 @@
 // https://github.com/abidnuri/javascript-project
 // First Problem kilometerToMeter
 function kilometerToMeter(kilometer) {
-    var kilometer = kilometer * 1000;
+    var meter = kilometer * 1000;
     if (kilometer < 0) {
-        return "Please use positive number."
+        return "Error! Please use positive number."
     }
     else {
-        return kilometer;
+        return meter;
     }
 }
-var meter = kilometerToMeter(8);
-console.log(meter);
+var findMeter = kilometerToMeter(5);
+console.log(findMeter);
 
 // Second Problem budgetCalculator
 // WatchPrice = 50, PhonePrice = 100, LaptopPrice = 500
@@ -35,7 +35,7 @@ console.log(result);
 // Third Problem hotelCost
 function hotelCost(time) {
     var cost = 0;
-    if(time<0){
+    if (time < 0) {
         return "Error! Time can't Negative."
     }
     else if (time <= 10) {
@@ -58,3 +58,17 @@ function hotelCost(time) {
 }
 var result = hotelCost(30);
 console.log(result);
+
+// Fourth Problem megaFriend
+function megaFriend(name) {
+    var friendName = name[0];
+    for (var i = 0; i < name.length; i++) {
+        var element = name[i];
+        if (element.length > friendName.length) {
+            friendName = element;
+        }
+    }
+    return friendName;
+}
+var result = ['Abid', 'Nuri', 'Saiful', 'Kaiful', 'Jashim Builders'];
+console.log(megaFriend(result));
